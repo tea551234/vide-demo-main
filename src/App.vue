@@ -28,7 +28,7 @@
 import { ref, reactive } from 'vue';
 // const Tagname = ref('');
 
-interface PLAYERS {
+interface Player {
   id: number
   name: string
   age: null | number
@@ -36,7 +36,7 @@ interface PLAYERS {
 }
 
 
-const items = reactive<PLAYERS[]>([
+const items = reactive<Player[]>([
   { id: 1, name: 'John', age: 25, email: 'john@example.com' },
   { id: 2, name: 'Jane', age: 30, email: 'jane@example.com' },
   { id: 3, name: 'Bob', age: 40, email: 'bob@example.com' }
@@ -44,38 +44,53 @@ const items = reactive<PLAYERS[]>([
 
 
 
-const addPlayer = reactive({
-  name:'',
+const Addplayer = reactive({
+  name: '',
   age: null,
-  email:''
+  email: ''
 });
 
 function submit() {
-  const newitems = {
-  id : items.length + 1,
-  name : addPlayer.name,
-  age : addPlayer.age,
-  email : addPlayer.email
-}
-  console.log('姓名:', newitems.name);
-  items.push(newitems);
+
+  if (Addplayer.name != '' && Addplayer.age != null && Addplayer.email != '') {
+    const newitems = {
+      id: items.length + 1,
+      name: Addplayer.name,
+      age: Addplayer.age,
+      email: Addplayer.email
+    }
+    items.push(newitems);
+
+  }
+  else {
+    alert('请填写完整信息');
+  }
 }
 
+let list = reactive<string[]>([]);
+const addlist = () => {
+  list.push('bob','bob@example.com');
+};
 
 </script> 
 
 <template>
-  <div>
-    <form>
-      <input type="text" v-model="addPlayer.name" placeholder="请输入姓名" />
-      <input type="number" v-model="addPlayer.age" placeholder="请输入年龄" />
-      <input type="text" v-model="addPlayer.email" placeholder="请输入email" />
-      <button v-on:click.prevent="submit">提交</button>
-    </form>
-  </div>
-  <div v-for="item in items" :key="item.id">
+  <!-- <div> -->
+  <!-- <form>
+      <input type="text" v-model="Addplayer.name" placeholder="请输入姓名" />
+      <input type="number" v-model="Addplayer.age" placeholder="请输入年龄" />
+      <input type="text" v-model="Addplayer.email" placeholder="请输入email" />
+      <button @click.prevent="submit">提交</button>
+    </form> -->
+  <!-- </div>
+    <div v-for="item in items" :key="item.id">
     {{ item.id }}：{{ item.name }}：{{ item.age }}：{{ item.email }}
+  </div> -->
+  <div v-for="item in list">
+    {{ item }}
   </div>
+  <button @click="addlist">add</button>
+
   <div>
 
     <!-- <input type="text" v-model="Tagname" /> -->
