@@ -79,18 +79,27 @@ interface FilterFunction {
 const isEven: FilterFunction = (value) => value % 2 === 0;
 //
 
-interface Axxsxx {
-  name: string
-  age: number
-  demo?:string
-  // [propName:string]:any //接取任意屬性
-}
+// function teayea<T>(a:T,b:T):Array<T>{
+//   return [a,b];
+// }
 
-let a: Axxsxx = {
-  name:'awa',
-  age:12,
-  // demo:'AAAA'
-}
+//使用 <T> 可以使後續需要帶入的數自行判斷類型
+
+
+
+
+// interface Axxsxx {
+//   name: string
+//   age: number
+//   demo?:string
+//   // [propName:string]:any //接取任意屬性
+// }
+
+// let a: Axxsxx = {
+//   name:'awa',
+//   age:12,
+//   // demo:'AAAA'
+// }
 
 // const arr: [x: number, y?: boolean] = [0, false]
 
