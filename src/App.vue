@@ -69,9 +69,37 @@ function submit() {
 
 let list = reactive<string[]>([]);
 const addlist = () => {
-  list.push('bob','bob@example.com');
+  list.push('bob', 'bob@example.com');
 };
 
+interface FilterFunction {
+  (value: number): boolean;
+}
+
+const isEven: FilterFunction = (value) => value % 2 === 0;
+
+//
+
+interface Axxsxx {
+  name: string
+  age: number
+  demo?:string
+  // [propName:string]:any //接取任意屬性
+}
+
+let a: Axxsxx = {
+  name:'awa',
+  age:12,
+  // demo:'AAAA'
+}
+  
+// const arr: [x: number, y?: boolean] = [0, false]
+
+// arr.push(1)
+// console.log(arr)
+
+
+//
 </script> 
 
 <template>
