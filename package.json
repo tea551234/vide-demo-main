@@ -16,5 +16,17 @@
     "typescript": "^5.0.2",
     "vite": "^4.3.9",
     "vue-tsc": "^1.4.2"
-  }
+  },
+  "description": "test",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tea551234/vide-demo-main.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tea551234/vide-demo-main/issues"
+  },
+  "homepage": "https://github.com/tea551234/vide-demo-main#readme"
 }
