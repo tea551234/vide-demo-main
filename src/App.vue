@@ -77,7 +77,6 @@ interface FilterFunction {
 }
 
 const isEven: FilterFunction = (value) => value % 2 === 0;
-
 //
 
 interface Axxsxx {
@@ -92,7 +91,7 @@ let a: Axxsxx = {
   age:12,
   // demo:'AAAA'
 }
-  
+
 // const arr: [x: number, y?: boolean] = [0, false]
 
 // arr.push(1)
