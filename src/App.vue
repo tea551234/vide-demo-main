@@ -108,6 +108,22 @@ console.log(isEven(11)); // true
 // console.log(arr)
 
 
+// let arr: number[] = [0, 1, 2, 3, 4, 5];
+// let arr2: Array<boolean> = [true, false, false, true];
+
+// interface Xdmoe {
+//   name: string;
+//   age?: number;
+// }
+
+// let arr3: Xdmoe[] = [{name:'a',age:12}, {name:'b',age:12}];
+
+//   //二維數組
+// let arr4:number[][] = [[1], [2], [3], [4]] ;
+
+
+
+
 //
 </script> 
 
