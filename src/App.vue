@@ -73,11 +73,12 @@ const addlist = () => {
 };
 
 interface FilterFunction {
-  (value: number): boolean;
+  (value: number): number;
 }
 
-const isEven: FilterFunction = (value) => value % 2 === 0;
-//
+const isEven: FilterFunction = (value) => value % 2;
+
+console.log(isEven(11)); // true
 
 // function teayea<T>(a:T,b:T):Array<T>{
 //   return [a,b];
